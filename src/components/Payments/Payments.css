@@ -1,0 +1,223 @@
+.payment-page {
+    min-height: 100vh;
+    background-color: var(--color-bg-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment-layout {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.payment-cart {
+    flex: 1 1 300px;
+    max-width: 460px;
+    max-height: 600px;
+    background: var(--color-bg-main);
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    padding: 30px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    overflow-x: auto;
+}
+
+.payment-card {
+    flex: 1 1 300px;
+    max-width: 500px;
+    background: var(--color-bg-main);
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    padding: 30px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.payment-card h2 {
+    margin-bottom: 16px;
+    color: var(--color-text-main);
+    font-size: 24px;
+    text-align: center;
+}
+
+.total {
+    margin-bottom: 24px;
+    color: var(--color-text-soft);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.payment-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-card input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    font-size: 15px;
+    transition: all 0.2s;
+}
+
+.payment-card input:focus {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    outline: none;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.row input {
+    flex: 1 1 0;
+    min-width: 120px;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+.payment-card button {
+    width: 100%;
+    padding: 14px;
+    background: var(--color-primary);
+    color: var(--color-text-secondary);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.payment-card button:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+.payment-card button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.payment-card button.loading::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    border: 2px solid var(--color-border);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    background-color: var(--color-bg-hover);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Success message */
+.success {
+    text-align: center;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.success h2 {
+    font-size: 24px;
+    color: var(--color-text-main);
+    animation: popIn 0.5s ease forwards;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Card type badge */
+.card-type {
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    justify-content: center;
+    color: var(--color-text-secondary);
+}
+/* Kartaga mos ranglar */
+.card-type {
+    background-color: var(--color-primary);
+}
+/* Responsiv */
+@media (max-width: 768px) {
+    .payment-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    .payment-card,
+    .payment-cart {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-page {
+        padding: 2rem 1rem;
+    }
+    .payment-card {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    .card-type {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}

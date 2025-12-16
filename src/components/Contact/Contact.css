@@ -1,0 +1,257 @@
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-main);
+    padding: 4rem 2rem;
+    font-family: sans-serif;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: var(--shadow-md);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.contact-info-panel {
+    flex: 1;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.panel-title {
+    font-size: 0.8em;
+    color: var(--color-text-soft);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.panel-heading {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.contact-item .icon {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-right: 15px;
+    padding-top: 3px;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.item-value {
+    font-size: 0.95em;
+    color: var(--color-text-soft);
+    line-height: 1.4;
+    margin-top: 5px;
+}
+
+/* Ijtimoiy tarmoqlar havolalari */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-text-secondary);
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.contact-form-panel {
+    flex: 1.2; /* Shakl panelini biroz kengroq qilish */
+    background-color: var(--color-bg-soft);
+    padding: 40px;
+}
+
+.form-heading {
+    font-size: 2.5rem;
+    color: var(--color-text-main);
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.form-description {
+    font-size: 0.95em;
+    color: var(--color-text-soft);
+    line-height: 1.5;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: 5px;
+    margin-top: 8px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--color-text-soft);
+    font-family: sans-serif;
+}
+
+/* Telefon raqami uchun maxsus stil */
+.phone-input-group {
+    display: flex;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.phone-input-group .country-code {
+    background-color: #f5f5f5;
+    padding: 12px;
+    color: var(--color-text-soft);
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid var(--color-border);
+}
+
+.phone-input-group input[type="tel"] {
+    border: none;
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+.phone-input-group input[type="tel"]:focus {
+    outline: none;
+}
+
+/* Checkbox va Shartlar */
+.terms-checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.terms-checkbox-group input[type="checkbox"] {
+    margin-top: 4px;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-primary);
+}
+
+.terms-label {
+    font-size: 0.9em;
+    color: var(--color-text-soft);
+    font-weight: 400;
+}
+
+.terms-label a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Yuborish tugmasi */
+.submit-button {
+    background-color: var(--color-primary);
+    color: var(--color-text-secondary);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: var(--color-primary-hover);
+}
+
+.submit-button:disabled {
+    background-color: var(--color-border);
+    cursor: not-allowed;
+}
+
+/* Mobil moslashuvchanlik (ixtiyoriy, lekin tavsiya etiladi) */
+@media (max-width: 800px) {
+    .contact-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-info-panel,
+    .contact-form-panel {
+        padding: 30px;
+    }
+
+    .contact-info-panel {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .contact-form-panel {
+        border-radius: 0 0 8px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel-heading {
+        font-size: 1.8em;
+    }
+    .form-heading {
+        font-size: 1.5em;
+    }
+}

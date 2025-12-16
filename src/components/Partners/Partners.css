@@ -1,0 +1,66 @@
+.brand-marquee-container {
+    padding: 40px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--color-text-main);
+}
+
+.brand-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+}
+
+.brand-track {
+    display: flex;
+    gap: 80px;
+    white-space: nowrap;
+    animation: scroll 12s linear infinite;
+}
+
+.brand-track span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-text-soft);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.brand-track span:hover {
+    color: var(--color-text-main);
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-track {
+        gap: 40px;
+    }
+    .brand-track span {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .brand-track {
+        gap: 25px;
+    }
+    .brand-track span {
+        font-size: 0.9rem;
+    }
+}

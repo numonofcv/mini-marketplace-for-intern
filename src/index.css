@@ -1,0 +1,86 @@
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+:root {
+    --color-primary: #4f46e5;
+    --color-primary-hover: #221394;
+    --color-secondary: #abc4c7;
+
+    --color-text-main: #1f2937;
+    --color-text-soft: #6b7280;
+    --color-text-secondary: #ffffff;
+
+    --color-bg-main: #ffffff;
+    --color-bg-hover: #f0f0f0;
+    --color-bg-soft: #f9fafb;
+    --color-bg-secondary: #1f2937;
+
+    --color-border: #e5e7eb;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#hero,
+#services,
+#partners,
+#products,
+#trending,
+#testimonials {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 3rem 2rem;
+}
+
+#partners,
+#trending {
+    background-color: var(--color-bg-main);
+}
+
+.section-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-text-main);
+}
+
+.title {
+    position: relative;
+    text-align: left;
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-main);
+}
+
+.title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -1rem;
+    width: 4px;
+    height: 30px;
+    background-color: var(--color-primary);
+    margin: 0 auto 10px auto;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 20px;
+    }
+}
