@@ -42,7 +42,7 @@
     top: 50%;
     transform: translateY(-50%);
     background: var(--color-primary);
-    color: var(color-bg-primary);
+    color: var(--color-bg-primary);
     border: none;
     padding: 10px 14px;
     font-size: 1.5rem;
