@@ -6,14 +6,14 @@
 
 ## ⏱ Vazifa uchun ketgan vaqt
 
-**Vaqt:** 8 soatdan 2 kun 4 soatgacha
+**Vaqt:** 8 soat
 
 ## ⚠️ Qiyin bo‘lgan joylar
 
 * **Kartalar formati bilan ishlash** – oldin to‘lov tizimini optimallashtirmagan edim.
-* **Backend o‘rniga Telegram bot** – to‘lov amalga oshirilganda ma’lumotlar bot orqali guruhga yuboriladi. Bu men uchun yangi tajriba bo‘ldi.
-* **Backend API yo‘qligi** – tekin API’dan foydalanildi. JSON API yaratish mumkin edi, lekin hozircha **FREE API** tanlandi.
-* **Route va ScrollToHash** – SPA’da sahifalar o‘rtasida silliq harakatni ta’minlash uchun ishlatildi.
+* **Backend o‘rniga Telegram bot** – to‘lov amalga oshirilganda ma’lumotlar bot orqali guruhga yuboriladi. Backend o'rniga telegramga yubordim malumotlarni.
+* **Backend API yo‘qligi** – tekin API’dan foydalanildi. JSON API yaratish mumkin edi, lekin hozircha **FREE API** tanlandim.
+* **Route va ScrollToHash** – SPA’da sahifalar o‘rtasida silliq harakatni ta’minlash uchun ishlatildi. SPA da ScrollToHashni qo'llash to'g'ri yo'l edi lekin men payments page qo'shganligim tufayli biroz chalkashliklar yuzaga keldi. Yani payments pageda navbar ishlamdi. lekin bu muammoni hal qildim va bu men uchun yangi tajriba bo'ldi.
 
 ## 🛠 Texnologiyalar
 
@@ -37,8 +37,9 @@
 
 ## 🖼 Interfeys skrinshotlari
 
-* ![Home Page](image-1.png)
+* ![To'lov amalga oshgandan keyin](image-1.png)
 * ![Payments Page](image-2.png)
+* ![Cart Box](image-3.png)
 
 ## 🚀 Demo
 
