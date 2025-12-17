@@ -28,7 +28,7 @@ function App() {
             <Navbar cartItems={cartItems} setCartItems={setCartItems} />
 
             <Routes>
-                <Route path="/#hero" element={<Home cartItems={cartItems} setCartItems={setCartItems} />} />
+                <Route path="/" element={<Home cartItems={cartItems} setCartItems={setCartItems} />} />
                 <Route path="/payments" element={<Payments cartItems={cartItems} setCartItems={setCartItems} />} />
             </Routes>
 

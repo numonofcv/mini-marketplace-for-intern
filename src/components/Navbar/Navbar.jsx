@@ -86,12 +86,20 @@ const Navbar = ({ cartItems, setCartItems }) => {
     <nav className="navbar">
       <div className="navbar-container">
         {" "}
-        <div className="navbar-logo" onClick={() => navigate("/")}>
-          Mini Market<span className="logo-dot">.</span>
-        </div>
+        <div className="navbar-logo" onClick={() => {
+    if (window.location.pathname !== "/") {
+        window.location.href = "/mini-marketplace-for-intern/#hero"; 
+    } else {
+        const el = document.getElementById("hero");
+        if(el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+}}>
+  Mini Market<span className="logo-dot">.</span>
+</div>
+
         <ul className="desktop-menu">
           <li className="nav-item">
-            <Link to="/#hero" onClick={() => navigate("/")}>
+            <Link to="/#hero" onClick={scrollToId}>
               Bosh Sahifa
             </Link>
           </li>
